@@ -13,11 +13,12 @@ Fix that by just adding the appropriate configuration options for
 automatically using libtool, without having to manually link the
 static library into a shared library.
 ---
- configure | 23 +++++++++++++++++++++++
- 1 file changed, 23 insertions(+)
+ configure            | 23 +++++++++++++++++++++++
+ libcharset/configure | 22 ++++++++++++++++++++++
+ 2 files changed, 45 insertions(+)
 
 diff --git a/configure b/configure
-index 668c3dd..a2857fc 100755
+index 668c3dd069bbde40c02a5fa3a1f2a8cef930fda0..a2857fc0d499aed9b91d2d119e6fc0d738c7eb82 100755
 --- a/configure
 +++ b/configure
 @@ -8649,6 +8649,10 @@ tpf*)
@@ -54,6 +55,60 @@ index 668c3dd..a2857fc 100755
        ld_shlibs=no
        ;;
 @@ -14729,6 +14741,17 @@ uts4*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
++serenity*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  library_names_spec='${libname}${release}${shared_ext}${versuffix} ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}${major}'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=no
++  dynamic_linker='SerenityOS LibELF'
++  ;;
++
+ *)
+   dynamic_linker=no
+   ;;
+diff --git a/libcharset/configure b/libcharset/configure
+index 9869901ba3fa164edc18a94ed06b49b89262ca89..7f9b03a5159011b2f4b484eb47fcedbfe6d80603 100755
+--- a/libcharset/configure
++++ b/libcharset/configure
+@@ -5557,6 +5557,9 @@ tpf*)
+ os2*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
++serenity*)
++  lt_cv_deplibs_check_method=pass_all
++  ;;
+ esac
+ 
+ fi
+@@ -9081,6 +9084,10 @@ lt_prog_compiler_static=
+       lt_prog_compiler_static='-Bstatic'
+       ;;
+ 
++serenity*)
++      lt_prog_compiler_can_build_shared=yes
++      ;;
++
+     *)
+       lt_prog_compiler_can_build_shared=no
+       ;;
+@@ -10613,6 +10620,10 @@ printf "%s\n" "$lt_cv_irix_exported_symbol" >&6; }
+       hardcode_shlibpath_var=no
+       ;;
+ 
++    serenity*)
++      ld_shlibs=yes
++      ;;
++
+     *)
+       ld_shlibs=no
+       ;;
+@@ -11685,6 +11696,17 @@ uts4*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
