@@ -14,9 +14,18 @@ configopts=(
 )
 workdir="perl-${version}"
 
+if [ "$(uname -s)" = "Darwin" ]; then
+    makeopts+=("-i")
+    # Make sure you have binutils and gnu-sed installed via homebrew
+    PATH="$(brew --prefix binutils)/bin:$PATH"
+    PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
+    export PATH="${SERENITY_BUILD_DIR}/Ports/${port}/${workdir}:$PATH"
+fi
+
 post_fetch() {
+    run chmod +w "$configscript"
     run cp -r "$PWD/perl-cross-1.5/"* "$PWD/perl-${version}/"
-    run cat <<- 'EOH' > $PWD/perl-${version}/cnf/hints/serenity
+    run cat <<- 'EOH' > "$PWD/perl-${version}/cnf/hints/serenity"
 libs='-ldl -lm -lcrypt -lcore'
 
 # Use OS's malloc() by default.
@@ -33,8 +42,8 @@ case "$usenm" in
 '') usenm='undef' ;;
 esac
 
-# enable nanosleep
-d_nanosleep='define'
+# disable nanosleep
+d_nanosleep='undef'
 
 # don't try to test min/max of gmtime/localtime
 sGMTIME_max=2147483647
@@ -42,4 +51,12 @@ sGMTIME_min=-2147481748
 sLOCALTIME_max=2147483647
 sLOCALTIME_min=-2147481748
 EOH
+
+if [ "$(uname -s)" = "Darwin" ]; then
+    cat <<- 'EOH' > "$PWD/perl-${version}/readelf"
+#!/bin/bash
+exec gobjdump "$@"
+EOH
+    chmod +x "$PWD/perl-${version}/readelf"
+fi
 }

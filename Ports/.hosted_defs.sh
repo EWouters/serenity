@@ -33,6 +33,7 @@ if [ "$SERENITY_TOOLCHAIN" = "Clang" ]; then
     export RANLIB="llvm-ranlib"
     export READELF="llvm-readelf"
     export OBJCOPY="llvm-objcopy"
+    export OBJDUMP="llvm-objdump"
     export STRIP="llvm-strip"
     export CXXFILT="llvm-cxxfilt"
 else
@@ -45,6 +46,7 @@ else
     export RANLIB="${SERENITY_ARCH}-pc-serenity-ranlib"
     export READELF="${SERENITY_ARCH}-pc-serenity-readelf"
     export OBJCOPY="${SERENITY_ARCH}-pc-serenity-objcopy"
+    export OBJDUMP="${SERENITY_ARCH}-pc-serenity-objdump"
     export STRIP="${SERENITY_ARCH}-pc-serenity-strip"
     export CXXFILT="${SERENITY_ARCH}-pc-serenity-c++filt"
 fi

@@ -17,3 +17,8 @@ Makefile: Don't run `lib/unicore/mktables` with -maketest
 This argument causes the interpreter to hang and consume huge amounts
 of RAM.
 
+## `0004-Disable-nanosleep.patch`
+
+Disable nanosleep
+
+
