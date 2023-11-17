@@ -9,15 +9,15 @@ Co-Authored-By: Manuel Palenzuela <manuelpalenzuelamerino@gmail.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/cmatrix.c b/cmatrix.c
-index 7e3fbb9..0d1053f 100644
+index 7d8ca3935ef89598ff285b0dd416d4c13e9a042e..a8ab2668b6736a95fb7e63ec8a9618eef35c681c 100644
 --- a/cmatrix.c
 +++ b/cmatrix.c
-@@ -48,7 +48,7 @@
+@@ -50,7 +50,7 @@
  #ifdef HAVE_NCURSES_H
  #include <ncurses.h>
  #else
 -#ifdef _WIN32
-+#ifdef _WIN32 || defined(__serenity__)
++#if defined(_WIN32) || defined(__serenity__)
  #include <ncurses/curses.h>
  #else
  #include <curses.h>
