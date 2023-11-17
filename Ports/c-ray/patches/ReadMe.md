@@ -35,10 +35,3 @@ Reduce HDR scene settings a bit
 Replace the micro symbol with a 'u'
 
 
-## `0008-Make-SDL-use-software-rendering.patch`
-
-Make SDL use software rendering
-
-Serenity does not support accelerated rendering
-
-

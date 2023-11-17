@@ -5,13 +5,13 @@ Subject: [PATCH] Let c-ray define its own version of vasprintf
 
 Co-Authored-By: Valtteri Koskivuori <vkoskiv@gmail.com>
 ---
- src/libraries/asprintf.h | 2 +-
+ src/vendored/asprintf.h | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/src/libraries/asprintf.h b/src/libraries/asprintf.h
-index 70a95ac..7571e8a 100644
---- a/src/libraries/asprintf.h
-+++ b/src/libraries/asprintf.h
+diff --git a/src/vendored/asprintf.h b/src/vendored/asprintf.h
+index 70a95ace8f431e2858792e0387d090a7647d5679..7571e8a46a623f6a12984e8ef21488c5c70ffdb9 100644
+--- a/src/vendored/asprintf.h
++++ b/src/vendored/asprintf.h
 @@ -33,7 +33,7 @@ int vscprintf(const char *format, va_list ap) {
   * GNU-C-compatible compilers implement these with the same names, thus we
   * don't have to do anything

@@ -9,10 +9,10 @@ Co-Authored-By: Valtteri Koskivuori <vkoskiv@gmail.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/src/utils/timer.c b/src/utils/timer.c
-index dd83497..3a4357f 100644
+index 885a405dbfb49c95417ccf8eae637c7a4272f320..e12bc25dd8b7b0cc67625715a73a2262724910f6 100644
 --- a/src/utils/timer.c
 +++ b/src/utils/timer.c
-@@ -48,7 +48,7 @@ long getUs(struct timeval timer) {
+@@ -48,7 +48,7 @@ long timer_get_us(struct timeval timer) {
  	return ((tmr2.tv_sec - timer.tv_sec) * 1000000) + (tmr2.tv_usec - timer.tv_usec);
  }
  
@@ -21,7 +21,7 @@ index dd83497..3a4357f 100644
  #define _BSD_SOURCE
  #include <unistd.h>
  #endif
-@@ -66,7 +66,7 @@ void sleepMSec(int ms) {
+@@ -66,7 +66,7 @@ void timer_sleep_ms(int ms) {
  	ts.tv_sec = ms / 1000;
  	ts.tv_nsec = (ms % 1000) * 1000000;
  	nanosleep(&ts, NULL);

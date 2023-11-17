@@ -10,15 +10,15 @@ Co-Authored-By: Valtteri Koskivuori <vkoskiv@gmail.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/renderer/renderer.c b/src/renderer/renderer.c
-index fe0e44e..6e5e20f 100644
+index 91ff49375820aab24dbe6f96f1dba72f318a3ee9..807cb3df3d727e28fbddfc4be167039686fa40d3 100644
 --- a/src/renderer/renderer.c
 +++ b/src/renderer/renderer.c
-@@ -146,7 +146,7 @@ struct texture *renderFrame(struct renderer *r) {
- 			float sps = (1000000.0f / usPerRay) * (r->prefs.threadCount + remoteThreads);
+@@ -162,7 +162,7 @@ struct texture *renderFrame(struct renderer *r) {
+ 			float sps = (1000000.0f / usPerRay) * (r->prefs.threads + remoteThreads);
  			char rem[64];
- 			smartTime((msecTillFinished) / (r->prefs.threadCount + remoteThreads), rem);
+ 			smartTime((msecTillFinished) / (r->prefs.threads + remoteThreads), rem);
 -			logr(info, "[%s%.0f%%%s] μs/path: %.02f, etf: %s, %.02lfMs/s %s        \r",
 +			logr(info, "[%s%.0f%%%s] us/path: %.02f, etf: %s, %.02lfMs/s %s        \r",
  				 KBLU,
- 				 interactive ? ((float)r->state.finishedPasses / (float)r->prefs.sampleCount) * 100.0f :
- 							   ((float)r->state.finishedTileCount / (float)r->state.tileCount) * 100.0f,
+ 				 interactive ? ((double)r->state.finishedPasses / (double)r->prefs.sampleCount) * 100.0 :
+ 							   ((double)r->state.finishedTileCount / (double)r->state.tileCount) * 100.0,

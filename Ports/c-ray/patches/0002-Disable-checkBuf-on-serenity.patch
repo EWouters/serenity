@@ -9,13 +9,13 @@ Co-Authored-By: Valtteri Koskivuori <vkoskiv@gmail.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/utils/fileio.c b/src/utils/fileio.c
-index 6365973..2edfed8 100644
+index 65dd83b32a2fe806c35adbaaaadce76dc4c26501..c6e14e921825e1141bc335dc932a360106e92bff 100644
 --- a/src/utils/fileio.c
 +++ b/src/utils/fileio.c
-@@ -147,7 +147,7 @@ bool isValidFile(char *path) {
+@@ -145,7 +145,7 @@ bool is_valid_file(char *path, struct file_cache *cache) {
+ }
  
- //Wait for 2 secs and abort if nothing is coming in from stdin
- void checkBuf() {
+ void wait_for_stdin(int seconds) {
 -#ifndef WINDOWS
 +#if !defined(WINDOWS) && !defined(__serenity__)
  	fd_set set;

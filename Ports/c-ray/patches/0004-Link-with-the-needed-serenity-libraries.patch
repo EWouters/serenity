@@ -10,15 +10,15 @@ Co-Authored-By: EWouters <6179932+EWouters@users.noreply.github.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 20f8440..dc254b5 100644
+index 10496cfa0c784780edae50aa5d3615e4cbcea891..aa2210627bed01df64cac539f65b284bfe5747d3 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -71,7 +71,7 @@ add_executable(c-ray ${SOURCES})
- target_include_directories(c-ray PRIVATE ${c-ray_SOURCE_DIR}/src)
+@@ -70,7 +70,7 @@ add_executable(c-ray ${SOURCES})
+ target_include_directories(c-ray PRIVATE ${c-ray_SOURCE_DIR}/include)
  target_include_directories(c-ray PRIVATE ${c-ray_SOURCE_DIR}/tests)
  if (NOT MSVC)
--	target_link_libraries(c-ray PRIVATE -lpthread -lm)
-+	target_link_libraries(c-ray PRIVATE -lSDL2 -lgui -lgfx -lipc -lcore -lpthread -lstdc++ -lm)
+-	target_link_libraries(c-ray PRIVATE -lpthread -lm -ldl)
++	target_link_libraries(c-ray PRIVATE -lSDL2 -lgui -lgfx -lipc -lcore -lpthread -lstdc++ -lm -ldl)
  endif ()
  
  include(CheckIPOSupported)
