@@ -6,7 +6,10 @@ files=(
 )
 useconfigure='true'
 configscript='configure.sh'
-configopts=("--prefix=/usr/local" "--disable-nls")
+configopts=(
+    '--prefix=/usr/local'
+    '--disable-nls'
+)
 
 export CFLAGS='-O3 -flto'
 
