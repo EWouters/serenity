@@ -9,7 +9,7 @@ Serenity's libc does have regex.
  1 file changed, 1 insertion(+)
 
 diff --git a/src/fingerprints/REXP/REXP.c b/src/fingerprints/REXP/REXP.c
-index c208078..88616b2 100644
+index c208078d3e91cfde09cea353a51a9a7b03a4278d..88616b25dff7d59a1babc2fee7abd70e650c0f82 100644
 --- a/src/fingerprints/REXP/REXP.c
 +++ b/src/fingerprints/REXP/REXP.c
 @@ -28,6 +28,7 @@

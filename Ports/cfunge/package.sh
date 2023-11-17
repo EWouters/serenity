@@ -1,10 +1,10 @@
 #!/usr/bin/env -S bash ../.port_include.sh
 
 port='cfunge'
-version='2bc4fb27ade2a816ca9a90a6d9f6958111123fa9'
+version='b7bf640b57f90f7b514a3289920954a05e7e224d'
 useconfigure='true'
 files=(
-    "https://github.com/VorpalBlade/cfunge/archive/${version}.zip#364994a890ed1083684956db576a2a5cfb94b3117bae868910d6a75111033f55"
+    "https://github.com/VorpalBlade/cfunge/archive/${version}.zip#c90303439f4bd0141d0e8a0f10b27efbe2f6358009825769670aad0096eae498"
 )
 
 configure() {

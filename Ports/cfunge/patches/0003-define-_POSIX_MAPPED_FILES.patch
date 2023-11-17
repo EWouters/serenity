@@ -9,7 +9,7 @@ Serenity has a working mmap().
  1 file changed, 1 insertion(+)
 
 diff --git a/src/funge-space/funge-space.c b/src/funge-space/funge-space.c
-index 0b78647..dc1f830 100644
+index 0b7864760e1b5422932437e3e04c3989bfcfe14d..dc1f830d5e34fdb56a067ee60c8dc08b5acdcc73 100644
 --- a/src/funge-space/funge-space.c
 +++ b/src/funge-space/funge-space.c
 @@ -47,6 +47,7 @@

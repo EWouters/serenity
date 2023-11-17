@@ -8,7 +8,7 @@ Subject: [PATCH] Define MAX inline instead of using sys/param.h
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/lib/fungestring/funge_str-two-way.h b/lib/fungestring/funge_str-two-way.h
-index 70295f4..a3e0888 100644
+index 70295f43f455484bfc96d5f818e31e74c746f835..a3e08881c7fdf47916507116c7e4583b74ae3b60 100644
 --- a/lib/fungestring/funge_str-two-way.h
 +++ b/lib/fungestring/funge_str-two-way.h
 @@ -53,7 +53,7 @@

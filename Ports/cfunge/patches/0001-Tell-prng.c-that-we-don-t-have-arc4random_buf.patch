@@ -10,14 +10,14 @@ FIXME: This function does exist, perhaps outdated or some issue -
  1 file changed, 1 insertion(+)
 
 diff --git a/src/prng.c b/src/prng.c
-index 004906d..d73b05c 100644
+index 63fd1eaac821218467d3ce648bc9116d2fad6851..936eda892b593050d406306bf6781e4be0e7640d 100644
 --- a/src/prng.c
 +++ b/src/prng.c
-@@ -29,6 +29,7 @@
- #  undef HAVE_arc4random_buf
+@@ -30,6 +30,7 @@
+ #  undef HAVE_arc4random_stir
  #endif
  
 +#undef HAVE_arc4random_buf
- #ifdef HAVE_arc4random_buf
+ #if defined(HAVE_arc4random_buf) && defined(HAVE_arc4random_stir)
  #  define HAVE_ARC4RANDOM
  #  ifndef ARC4RANDOM_IN_BSD
