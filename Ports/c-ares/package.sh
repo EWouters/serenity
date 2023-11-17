@@ -1,8 +1,8 @@
 #!/usr/bin/env -S bash ../.port_include.sh
 port='c-ares'
-version='1.19.0'
+version='1.22.0'
 files=(
-    "https://c-ares.org/download/c-ares-${version}.tar.gz#bfceba37e23fd531293829002cac0401ef49a6dc55923f7f92236585b7ad1dd3"
+    "https://c-ares.org/download/c-ares-${version}.tar.gz#ad2e205088083317147c9f9eab5f24b82c3d50927c381a7c963deeb1182dbc21"
 )
 useconfigure='true'
 
