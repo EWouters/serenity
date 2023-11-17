@@ -6,5 +6,11 @@ files=(
 )
 useconfigure='true'
 use_fresh_config_sub='true'
-configopts=("--prefix=/usr/local" "--with-ncurses" "--with-curses-dir=${SERENITY_INSTALL_ROOT}/usr/local/include/ncurses")
-depends=("ncurses")
+configopts=(
+    '--prefix=/usr/local'
+    '--with-ncurses'
+    "--with-curses-dir=${SERENITY_INSTALL_ROOT}/usr/local/include/ncurses"
+)
+depends=(
+    'ncurses'
+)
