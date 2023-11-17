@@ -1,8 +1,8 @@
 #!/usr/bin/env -S bash ../.port_include.sh
 port='awk'
-version='20220122'
+version='2ndEdition'
 files=(
-    "https://github.com/onetrueawk/awk/archive/refs/tags/${version}.tar.gz#720a06ff8dcc12686a5176e8a4c74b1295753df816e38468a6cf077562d54042"
+    "https://github.com/onetrueawk/awk/archive/refs/tags/${version}.tar.gz#6c3dbd72b6c4dd58340686df0b189a7813cf49aeeb9aa14846dfbeca1bc8d3a7"
 )
 
 build() {
