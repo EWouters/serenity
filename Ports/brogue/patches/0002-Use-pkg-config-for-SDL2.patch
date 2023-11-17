@@ -8,10 +8,10 @@ Subject: [PATCH] Use pkg-config for SDL2
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/config.mk b/config.mk
-index 9655958..0ce2e55 100644
+index 02a53a5730ee72400c78f85e357d804cccb4bdbd..dd3ae8b7ec8db995214bf50bd5c25b2c07a7cb85 100644
 --- a/config.mk
 +++ b/config.mk
-@@ -7,7 +7,7 @@ TERMINAL := NO
+@@ -10,7 +10,7 @@ TERMINAL := NO
  # Include graphical support. Requires SDL2 and SDL2_image
  GRAPHICS := YES
  # Path to sdl2-config script

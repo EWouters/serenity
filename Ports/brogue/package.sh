@@ -4,10 +4,10 @@ depends=(
     'SDL2'
     'SDL2_image'
 )
-version='1.12'
+version='1.13'
 workdir="BrogueCE-${version}"
 files=(
-    "https://github.com/tmewett/BrogueCE/archive/refs/tags/v${version}.tar.gz#aeed3f6ca0f4e352137b0196e9dddbdce542a9e99dda9effd915e018923cd428"
+    "https://github.com/tmewett/BrogueCE/archive/refs/tags/v${version}.tar.gz#4c63e91639902d58565ab3c2852d89a4206cdd60200b585fa9d93d6a5881906c"
 )
 makeopts+=(
     'bin/brogue'
