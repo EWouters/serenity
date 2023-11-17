@@ -9,29 +9,29 @@ Subject: [PATCH] Skip building helpers by default
  2 files changed, 5 insertions(+)
 
 diff --git a/configure.ac b/configure.ac
-index 4829288..9f9a155 100644
+index 52aa429a86d15780b6261947e254cba58eac3800..0faf2448bc63afa03fce624d283c179bae581414 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -181,5 +181,8 @@ AC_ARG_ENABLE(lineno, AS_HELP_STRING(--disable-lineno, \
+@@ -196,5 +196,8 @@ AC_ARG_ENABLE(lineno, AS_HELP_STRING(--disable-lineno, \
  if test "$enable_lineno" != "no"; then
  	AC_DEFINE([WITH_LINENO], 1, [Define if you build with -DWITH_LINENO])
  fi
 +AC_ARG_ENABLE(helpers, AS_HELP_STRING(--enable-helpers, \
-+				     [Build helpers]))
++					   [Build helpers]))
 +AM_CONDITIONAL([BUILD_HELPERS], [test x$enable_helpers = xyes])
  AC_CONFIG_FILES([Makefile src/Makefile])
  AC_OUTPUT
 diff --git a/src/Makefile.am b/src/Makefile.am
-index 139355e..e95491a 100644
+index 173246535de4c8058a5f61ffbc3df569a44ec556..a128d0f2eb979e4a6aa0fddb2c2ee4e1bc622f76 100644
 --- a/src/Makefile.am
 +++ b/src/Makefile.am
-@@ -66,7 +66,9 @@ syntax.c syntax.h: mksyntax
+@@ -64,7 +64,9 @@ syntax.c syntax.h: mksyntax
  signames.c: mksignames
- 	./$^
+ 	$(AM_V_GEN)./$^
  
 +if BUILD_HELPERS
  mksyntax: token.h
  
  $(HELPERS): %: %.c
- 	$(COMPILE_FOR_BUILD) -o $@ $<
+ 	$(AM_V_CC)$(COMPILE_FOR_BUILD) -o $@ $<
 +endif

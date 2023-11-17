@@ -1,9 +1,9 @@
 #!/usr/bin/env -S bash ../.port_include.sh
 port=dash
-version=0.5.10.2
+version=0.5.12
 useconfigure=true
 files=(
-    "http://gondor.apana.org.au/~herbert/dash/files/dash-${version}.tar.gz#3c663919dc5c66ec991da14c7cf7e0be8ad00f3db73986a987c118862b5f6071"
+    "http://gondor.apana.org.au/~herbert/dash/files/dash-${version}.tar.gz#6a474ac46e8b0b32916c4c60df694c82058d3297d8b385b74508030ca4a8f28a"
 )
 
 configure() {
