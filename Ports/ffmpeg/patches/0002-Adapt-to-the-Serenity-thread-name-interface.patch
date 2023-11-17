@@ -8,7 +8,7 @@ Subject: [PATCH] Adapt to the Serenity thread name interface
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/libavutil/thread.h b/libavutil/thread.h
-index 2f5e7e1cb552fd12f954334e80960cbfb6ac7108..264d6ae646dc78e0f21b58445a412487e055ebc5 100644
+index 2ded498c8991b24630ce818121859e6f5ac206a4..be989396490e3ba4e2f1f974657eb8cd4b2ae2cf 100644
 --- a/libavutil/thread.h
 +++ b/libavutil/thread.h
 @@ -26,6 +26,8 @@
@@ -20,7 +20,7 @@ index 2f5e7e1cb552fd12f954334e80960cbfb6ac7108..264d6ae646dc78e0f21b58445a412487
  #endif
  
  #include "error.h"
-@@ -195,7 +197,7 @@ static inline int ff_thread_once(char *control, void (*routine)(void))
+@@ -214,7 +216,7 @@ static inline int ff_thread_once(char *control, void (*routine)(void))
  static inline int ff_thread_setname(const char *name)
  {
  #if HAVE_PRCTL
