@@ -11,7 +11,7 @@ Co-Authored-By: Yonatan Goldschmidt <yon.goldschmidt@gmail.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/Makefile.in b/Makefile.in
-index e824491..f30f508 100644
+index e824491d62ca121059a2eaf3a572ba84b5e29aa3..f30f5088e032499b015f16631daa6f07f8ba0a68 100644
 --- a/Makefile.in
 +++ b/Makefile.in
 @@ -97,7 +97,7 @@ prefix=@prefix@

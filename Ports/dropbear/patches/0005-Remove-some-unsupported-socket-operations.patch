@@ -5,14 +5,14 @@ Subject: [PATCH] Remove some unsupported socket operations
 
 Co-Authored-By: Yonatan Goldschmidt <yon.goldschmidt@gmail.com>
 ---
- netio.c | 12 ++----------
- 1 file changed, 2 insertions(+), 10 deletions(-)
+ netio.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
 
 diff --git a/netio.c b/netio.c
-index 2ed9bb1..e0e9962 100644
+index b8aebead81a9ea841c2e96864b0b4b08deafedde..224f37e826885aeee76e09471d48699ca8b0ce8c 100644
 --- a/netio.c
 +++ b/netio.c
-@@ -304,7 +304,7 @@ void packet_queue_to_iovec(const struct Queue *queue, struct iovec *iov, unsigne
+@@ -305,7 +305,7 @@ void packet_queue_to_iovec(const struct Queue *queue, struct iovec *iov, unsigne
  	buffer *writebuf;
  
  #ifndef IOV_MAX
@@ -21,7 +21,7 @@ index 2ed9bb1..e0e9962 100644
  		#define IOV_MAX 1024
  	#elif defined(__sgi)
  		#define IOV_MAX 512 
-@@ -469,7 +469,6 @@ int dropbear_listen(const char* address, const char* port,
+@@ -472,7 +472,6 @@ int dropbear_listen(const char* address, const char* port,
  	struct addrinfo hints, *res = NULL, *res0 = NULL;
  	int err;
  	unsigned int nsock;
@@ -29,7 +29,7 @@ index 2ed9bb1..e0e9962 100644
  	int val;
  	int sock;
  	uint16_t *allocated_lport_p = NULL;
-@@ -548,9 +547,6 @@ int dropbear_listen(const char* address, const char* port,
+@@ -551,9 +550,6 @@ int dropbear_listen(const char* address, const char* port,
  		val = 1;
  		/* set to reuse, quick timeout */
  		setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, (void*) &val, sizeof(val));

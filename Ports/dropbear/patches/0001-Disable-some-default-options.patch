@@ -9,7 +9,7 @@ Co-Authored-By: Yonatan Goldschmidt <yon.goldschmidt@gmail.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/default_options.h b/default_options.h
-index 536f4e7..5073b7c 100644
+index 513277514fd03b130b18bfd9640224fa6fb42c09..28ee083e3d4df1a975a84f0b3f07ac2f4c7058d8 100644
 --- a/default_options.h
 +++ b/default_options.h
 @@ -72,8 +72,8 @@ IMPORTANT: Some options will require "make clean" after changes */
@@ -23,7 +23,7 @@ index 536f4e7..5073b7c 100644
  
  /* Note: Both DROPBEAR_CLI_PROXYCMD and DROPBEAR_CLI_NETCAT must be set to
   * allow multihop dbclient connections */
-@@ -210,7 +210,7 @@ group1 in Dropbear server too */
+@@ -223,7 +223,7 @@ group1 in Dropbear server too */
  
  /* Authentication Types - at least one required.
     RFC Draft requires pubkey auth, and recommends password */
