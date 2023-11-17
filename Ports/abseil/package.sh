@@ -1,7 +1,7 @@
 #!/usr/bin/env -S bash ../.port_include.sh
 port='abseil'
 useconfigure='true'
-version='20230802.0'
+version='20230802.1'
 configopts=(
     "-DCMAKE_TOOLCHAIN_FILE=${SERENITY_BUILD_DIR}/CMakeToolchain.txt"
     '-DABSL_PROPAGATE_CXX_STD=ON'
