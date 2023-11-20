@@ -1,17 +1,13 @@
 #!/usr/bin/env -S bash ../.port_include.sh
 port='freeciv'
-version='3.0.8'
+version='3.0.9'
 useconfigure='true'
-use_fresh_config_sub='true'
-config_sub_paths=(
-    'bootstrap/config.sub'
-)
 configopts=(
     '--enable-client=sdl2'
     '--enable-fcmp=no'
 )
 files=(
-    "http://files.freeciv.org/stable/freeciv-${version}.tar.xz#3b5aa32f628890be1741c3ac942cee82c79c065f8db6baff18d734a5c0e776d4"
+    "http://files.freeciv.org/stable/freeciv-${version}.tar.xz#16c46a9c378b4a511c1e3d3a7c435a78230a432d8b852202aaf5d5d584962742"
 )
 depends=(
     'curl'
