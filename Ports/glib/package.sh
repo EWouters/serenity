@@ -1,8 +1,8 @@
 #!/usr/bin/env -S bash ../.port_include.sh
 port='glib'
-version='2.78.0'
+version='2.78.1'
 files=(
-    "https://download.gnome.org/sources/glib/2.78/glib-${version}.tar.xz#44eaab8b720877ce303c5540b657b126f12dc94972d9880b52959f43fb537b30"
+    "https://download.gnome.org/sources/glib/2.78/glib-${version}.tar.xz#915bc3d0f8507d650ead3832e2f8fb670fce59aac4d7754a7dab6f1e6fed78b2"
 )
 useconfigure='true'
 configopts=(
